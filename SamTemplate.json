@@ -1,0 +1,27 @@
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Transform": "AWS::Serverless-2016-10-31",
+    "Description": "Simple example Lambda-based website.",
+    "Resources": {
+        "PythonLambdaRuntime": {
+            "Type" : "AWS::SSM::Parameter",
+            "Properties" : {
+                "DataType" : "text",
+                "Description" : "",
+                "Name" : "/dev/PythonLambdaRuntime",
+                "Type" : "String",
+                "Value" : "python3.9"
+            }
+        },
+        "CodeBuildImage": {
+            "Type" : "AWS::SSM::Parameter",
+            "Properties" : {
+                "DataType" : "text",
+                "Description" : "",
+                "Name" : "/dev/CodeBuildImage",
+                "Type" : "String",
+                "Value" : "aws/codebuild/amazonlinux2-x86_64-standard:4.0"
+            }
+        }
+    }
+}

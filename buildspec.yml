@@ -1,0 +1,9 @@
+version: 0.2
+phases:
+  build:
+    commands:
+      - aws cloudformation package --template-file SamTemplate.json --s3-bucket $S3_BUCKET --output-template-file NewSamTemplate.json --use-json
+artifacts:
+  files:
+    - NewSamTemplate.json
+  discard-paths: yes
