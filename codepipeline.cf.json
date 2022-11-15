@@ -8,12 +8,13 @@
         },
         "PackageName": {
             "Type": "String",
-            "Description": "GitHub package name."
+            "Description": "GitHub package name.",
+            "Default": "ssm_parameters"
         },
         "PackageBranch": {
             "Type": "String",
             "Description": "GitHub package branch.",
-            "Default": "master"
+            "Default": "main"
         },
         "BuildTimeout": {
             "Type": "Number",
@@ -23,7 +24,8 @@
         "ChildStackName": {
             "Type": "String",
             "Description": "Name of the pipeline, build project, and stack this will create.  I recommend <PackageName>-<PackageBranch>",
-            "MinLength": 1
+            "MinLength": 1,
+            "Default": "ssmparameters-main"
         },
         "BuildImage": {
             "Type": "String",

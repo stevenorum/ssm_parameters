@@ -7,7 +7,7 @@
             "Type" : "AWS::SSM::Parameter",
             "Properties" : {
                 "DataType" : "text",
-                "Description" : "",
+                "Description" : "The Runtime to use for python lambdas.",
                 "Name" : "/dev/PythonLambdaRuntime",
                 "Type" : "String",
                 "Value" : "python3.9"
@@ -17,7 +17,7 @@
             "Type" : "AWS::SSM::Parameter",
             "Properties" : {
                 "DataType" : "text",
-                "Description" : "",
+                "Description" : "The build image to use in CodeBuild.",
                 "Name" : "/dev/CodeBuildImage",
                 "Type" : "String",
                 "Value" : "aws/codebuild/amazonlinux2-x86_64-standard:4.0"
